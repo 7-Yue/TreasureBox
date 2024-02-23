@@ -12,6 +12,7 @@
 		0A5099A22B8835F0003C774E /* TreasureBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099A12B8835F0003C774E /* TreasureBoxTests.swift */; };
 		0A5099A32B8835F0003C774E /* TreasureBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5099952B8835F0003C774E /* TreasureBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099E92B8836DB003C774E /* DataStructureTool.swift */; };
+		0A5099ED2B8877EB003C774E /* PropertyWrapperTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		0A50999C2B8835F0003C774E /* TreasureBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5099A12B8835F0003C774E /* TreasureBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureBoxTests.swift; sourceTree = "<group>"; };
 		0A5099E92B8836DB003C774E /* DataStructureTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTool.swift; sourceTree = "<group>"; };
+		0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperTool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,9 @@
 		0A5099942B8835F0003C774E /* TreasureBox */ = {
 			isa = PBXGroup;
 			children = (
-				0A5099952B8835F0003C774E /* TreasureBox.h */,
 				0A5099E82B8836AE003C774E /* Swift */,
+				0A5099EB2B884287003C774E /* OC */,
+				0A5099952B8835F0003C774E /* TreasureBox.h */,
 				0A5099962B8835F0003C774E /* TreasureBox.docc */,
 			);
 			path = TreasureBox;
@@ -92,8 +95,16 @@
 			isa = PBXGroup;
 			children = (
 				0A5099E92B8836DB003C774E /* DataStructureTool.swift */,
+				0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		0A5099EB2B884287003C774E /* OC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5099ED2B8877EB003C774E /* PropertyWrapperTool.swift in Sources */,
 				0A5099972B8835F0003C774E /* TreasureBox.docc in Sources */,
 				0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */,
 			);

@@ -135,3 +135,4 @@ public class UserSettings<T> {
         self.memoryValue = value ?? self.defaultValue
     }
 }
+

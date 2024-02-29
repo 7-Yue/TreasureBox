@@ -1,11 +1,13 @@
 import Foundation
 
-// MARK: - DataStructureTool
+// MARK: - Judge NSObject Type
 
 public func isNSObjectType(_ v: Any) -> Bool {
     print(v)
     return v is NSObject || v is NSObject.Type
 }
+
+// MARK: - Get Property
 
 public func getProperty(_ v: Any) -> [String] {
     var list = [String]()
@@ -36,4 +38,49 @@ public func getProperty(_ v: Any) -> [String] {
         }
     }
     return list
+}
+
+// MARK: - Associated Property
+
+public enum AssociationPolicy {
+    case assign
+    case weak
+    case atomic_copy
+    case atomic_retain
+    case nonatomic_copy
+    case nonatomic_retain
+}
+
+public func setAssociated(object: Any, key: UnsafeRawPointer, value: Any?, policy: AssociationPolicy) {
+    switch policy {
+    case .assign:
+        objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_ASSIGN)
+    case .weak:
+        if let c = value as? AnyObject {
+            var closure: () -> Any? = { [weak c] in
+                return c
+            }
+            objc_setAssociatedObject(object, key, closure, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+    case .atomic_copy:
+        objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_COPY)
+    
+    case .atomic_retain:
+        objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_RETAIN)
+    
+    case .nonatomic_copy:
+        objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+    
+    case .nonatomic_retain:
+        objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    
+    }
+}
+
+public func getAssociated(object: Any, key: UnsafeRawPointer) -> Any? {
+    let value = objc_getAssociatedObject(object, key)
+    if let c = value as? (() -> Any?) {
+        return c()
+    }
+    return value
 }

@@ -140,7 +140,7 @@ extension TreasureBoxTests {
         let c1AssociatedValue1_exp = expectation(description: "c1AssociatedValue1_exp")
         setAssociated(object: c1, key: &c1AssociatedValue1, value: 3, policy: .assign)
         DispatchQueue.global().async {
-            if let v = getAssociated(object: c1, key: &c1AssociatedValue1) {
+            if let _ = getAssociated(object: c1, key: &c1AssociatedValue1) {
                 c1AssociatedValue1_exp.fulfill()
             }
         }

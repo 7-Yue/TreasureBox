@@ -20,7 +20,7 @@ public func getProperty(_ v: Any) -> [String] {
                 list.append(name)
             }
         }
-    } else if v is NSObject.Type {
+    } else if v is NSObject.Type {// 元类型判断
         var propertiesCount : CUnsignedInt = 0
         let properties = class_copyPropertyList(v as? AnyClass, &propertiesCount)
         for i in 0 ..< Int(propertiesCount) {
@@ -57,7 +57,7 @@ public func setAssociated(object: Any, key: UnsafeRawPointer, value: Any?, polic
         objc_setAssociatedObject(object, key, value, .OBJC_ASSOCIATION_ASSIGN)
     case .weak:
         if let c = value as? AnyObject {
-            var closure: () -> Any? = { [weak c] in
+            let closure: () -> Any? = { [weak c] in
                 return c
             }
             objc_setAssociatedObject(object, key, closure, .OBJC_ASSOCIATION_COPY_NONATOMIC)

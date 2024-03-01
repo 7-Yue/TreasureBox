@@ -28,6 +28,10 @@ final class TreasureBoxTests: XCTestCase {
 
 }
 
+protocol C {
+    var c: Int { get set }
+}
+
 extension TreasureBoxTests {
     
     func testIsNSObjectType() throws {
@@ -194,5 +198,40 @@ extension TreasureBoxTests {
         }
         
         waitForExpectations(timeout: 5)
+    }
+    
+    func testAnythingName() throws {
+        class A {
+            let a:Int
+            init(a: Int) {
+                self.a = a
+            }
+        }
+        
+        struct B {
+            let b: Int
+            init(b: Int) {
+                self.b = b
+            }
+        }
+        
+        struct C1 : C {
+            var c: Int
+            
+            init(c: Int) {
+                self.c = c
+            }
+        }
+        
+        print(TreasureBox.name(A.self))
+        print(TreasureBox.name(A(a: 1)))
+        print(TreasureBox.name(B.self))
+        print(TreasureBox.name(B(b: 1)))
+        print(TreasureBox.name(C.self))
+        print(TreasureBox.name(C1.self))
+        print(TreasureBox.name(C1(c: 3)))
+        print(TreasureBox.name(""))
+        print(TreasureBox.name(NSObject()))
+        print(TreasureBox.name(NSObject.self))
     }
 }

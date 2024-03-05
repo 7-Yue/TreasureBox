@@ -15,6 +15,7 @@
 		0A5099D02B88363F003C774E /* TreasureBoxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099CF2B88363F003C774E /* TreasureBoxDemoTests.swift */; };
 		0A5099DA2B88363F003C774E /* TreasureBoxDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099D92B88363F003C774E /* TreasureBoxDemoUITests.swift */; };
 		0A5099DC2B88363F003C774E /* TreasureBoxDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099DB2B88363F003C774E /* TreasureBoxDemoUITestsLaunchTests.swift */; };
+		0A51E10E2B96CF94006118E4 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A51E10D2B96CF94006118E4 /* image.png */; };
 		0A83842D2B9174D500C2A2D8 /* TreasureBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A83842C2B9174D500C2A2D8 /* TreasureBox.framework */; };
 		0A83842E2B9174D500C2A2D8 /* TreasureBox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A83842C2B9174D500C2A2D8 /* TreasureBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		0A5099D52B88363F003C774E /* TreasureBoxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureBoxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5099D92B88363F003C774E /* TreasureBoxDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureBoxDemoUITests.swift; sourceTree = "<group>"; };
 		0A5099DB2B88363F003C774E /* TreasureBoxDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureBoxDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A51E10D2B96CF94006118E4 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		0A83842C2B9174D500C2A2D8 /* TreasureBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TreasureBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 		0A5099B72B88363D003C774E /* TreasureBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0A51E10D2B96CF94006118E4 /* image.png */,
 				0A5099B82B88363D003C774E /* AppDelegate.swift */,
 				0A5099BC2B88363D003C774E /* ViewController.swift */,
 				0A5099BE2B88363D003C774E /* Main.storyboard */,
@@ -259,6 +262,7 @@
 				0A5099C52B88363F003C774E /* LaunchScreen.storyboard in Resources */,
 				0A5099C22B88363F003C774E /* Assets.xcassets in Resources */,
 				0A5099C02B88363D003C774E /* Main.storyboard in Resources */,
+				0A51E10E2B96CF94006118E4 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

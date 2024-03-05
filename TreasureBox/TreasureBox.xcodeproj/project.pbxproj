@@ -13,7 +13,7 @@
 		0A5099A32B8835F0003C774E /* TreasureBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5099952B8835F0003C774E /* TreasureBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099E92B8836DB003C774E /* DataStructureTool.swift */; };
 		0A5099ED2B8877EB003C774E /* PropertyWrapperTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */; };
-		0A5099FC2B8C96C9003C774E /* OtherTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099FB2B8C96C9003C774E /* OtherTool.swift */; };
+		0A51E1102B971CF9006118E4 /* OtherTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51E10F2B971CF9006118E4 /* OtherTool.swift */; };
 		0A8384322B917F3900C2A2D8 /* ToolObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8384302B917F3900C2A2D8 /* ToolObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A8384332B917F3900C2A2D8 /* ToolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8384312B917F3900C2A2D8 /* ToolObject.m */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 		0A5099A12B8835F0003C774E /* TreasureBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureBoxTests.swift; sourceTree = "<group>"; };
 		0A5099E92B8836DB003C774E /* DataStructureTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTool.swift; sourceTree = "<group>"; };
 		0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperTool.swift; sourceTree = "<group>"; };
-		0A5099FB2B8C96C9003C774E /* OtherTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtherTool.swift; path = ../../../../../Documents/OtherTool.swift; sourceTree = "<group>"; };
+		0A51E10F2B971CF9006118E4 /* OtherTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTool.swift; sourceTree = "<group>"; };
 		0A8384302B917F3900C2A2D8 /* ToolObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolObject.h; sourceTree = "<group>"; };
 		0A8384312B917F3900C2A2D8 /* ToolObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,9 +100,9 @@
 		0A5099E82B8836AE003C774E /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				0A51E10F2B971CF9006118E4 /* OtherTool.swift */,
 				0A5099E92B8836DB003C774E /* DataStructureTool.swift */,
 				0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */,
-				0A5099FB2B8C96C9003C774E /* OtherTool.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 			files = (
 				0A8384332B917F3900C2A2D8 /* ToolObject.m in Sources */,
 				0A5099ED2B8877EB003C774E /* PropertyWrapperTool.swift in Sources */,
-				0A5099FC2B8C96C9003C774E /* OtherTool.swift in Sources */,
+				0A51E1102B971CF9006118E4 /* OtherTool.swift in Sources */,
 				0A5099972B8835F0003C774E /* TreasureBox.docc in Sources */,
 				0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */,
 			);

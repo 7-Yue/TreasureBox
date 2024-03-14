@@ -17,6 +17,11 @@ final class TreasureBoxTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        class A {
+            init() {
+                
+            }
+        }    
     }
 
     func testPerformanceExample() throws {
@@ -101,105 +106,6 @@ extension TreasureBoxTests {
          
     }
     
-    func testAssociatedProperty() throws {
-        class Obj {
-            let p1 = "123"
-            let p2 = "12"
-            let p3 = "1"
-            init() {
-                
-            }
-        }
-        
-        class SwiftPerson {
-            var name: String
-            var age: Int
-            var o1: Obj?
-            var o2: Obj?
-            init(name: String, age: Int, o1: Obj? = nil, o2: Obj? = nil) {
-                self.name = name
-                self.age = age
-                self.o1 = o1
-                self.o2 = o2
-            }
-        }
-        
-        class OCPerson: NSObject {
-            var name: String
-            var age: Int
-            var o1: Obj?
-            var o2: Obj?
-            init(name: String, age: Int, o1: Obj? = nil, o2: Obj? = nil) {
-                self.name = name
-                self.age = age
-                self.o1 = o1
-                self.o2 = o2
-            }
-        }
-        
-        let c1 = SwiftPerson(name: "c1", age: 2, o1: Obj(), o2: Obj())
-        
-        //  assign
-        var c1AssociatedValue1 = UnsafeRawPointer(("c1AssociatedValue" as NSString).utf8String)
-        let c1AssociatedValue1_exp = expectation(description: "c1AssociatedValue1_exp")
-        setAssociated(object: c1, key: &c1AssociatedValue1, value: 3, policy: .assign)
-        DispatchQueue.global().async {
-            if let _ = getAssociated(object: c1, key: &c1AssociatedValue1) {
-                c1AssociatedValue1_exp.fulfill()
-            }
-        }
-        
-        //  weak
-        var c1AssociatedValue2 = UnsafeRawPointer(("c1AssociatedValue2" as NSString).utf8String)
-        var c1AssociatedValue2_value: Obj? = Obj()
-        
-        let c1AssociatedValue2_exp1 = expectation(description: "c1AssociatedValue2_exp1")
-        setAssociated(object: c1, key: &c1AssociatedValue2, value: c1AssociatedValue2_value, policy: .weak)
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            if let _ = getAssociated(object: c1, key: &c1AssociatedValue2) {
-                c1AssociatedValue2_exp1.fulfill()
-            }
-        }
-        
-        let c1AssociatedValue2_exp2 = expectation(description: "c1AssociatedValue2_exp2")
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
-            c1AssociatedValue2_value = nil
-            guard let _ = getAssociated(object: c1, key: &c1AssociatedValue2) else {
-                c1AssociatedValue2_exp2.fulfill()
-                return
-            }
-        }
-        
-        // nonatomic_copy
-        var c1AssociatedValue3 = UnsafeRawPointer(("c1AssociatedValue3" as NSString).utf8String)
-        let c1AssociatedValue3_value: NSMutableArray? = NSMutableArray()
-        
-        let c1AssociatedValue3_exp = expectation(description: "c1AssociatedValue3_exp")
-        setAssociated(object: c1, key: &c1AssociatedValue3, value: c1AssociatedValue3_value, policy: .nonatomic_copy)
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            if let _ = getAssociated(object: c1, key: &c1AssociatedValue3) as? NSArray {
-                c1AssociatedValue3_exp.fulfill()
-            }
-        }
-        
-        // nonatomic_retain
-        var c1AssociatedValue4 = UnsafeRawPointer(("c1AssociatedValue4" as NSString).utf8String)
-        let c1AssociatedValue4_value: NSMutableArray? = NSMutableArray()
-        
-        let c1AssociatedValue4_exp = expectation(description: "c1AssociatedValue4_exp")
-        setAssociated(object: c1, key: &c1AssociatedValue4, value: c1AssociatedValue4_value, policy: .nonatomic_retain)
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            if let v = getAssociated(object: c1, key: &c1AssociatedValue4) as? NSMutableArray {
-                v.add("1")
-            }
-            if let v = getAssociated(object: c1, key: &c1AssociatedValue4) as? NSMutableArray, v.count > 0 {
-                c1AssociatedValue4_exp.fulfill()
-            }
-        }
-        
-        waitForExpectations(timeout: 5)
-    }
-    
     func testAnythingName() throws {
         class A {
             let a:Int
@@ -233,5 +139,42 @@ extension TreasureBoxTests {
         print(TreasureBox.name(""))
         print(TreasureBox.name(NSObject()))
         print(TreasureBox.name(NSObject.self))
+    }
+    
+    func testOCAssociatedObject() throws {
+        let a = NSObject()
+        do {
+            a.setAssociatedValue(1, key: "age", policy: .assign)
+            print(a.getAssociatedValue(withKey: "age") ?? "")
+        }
+        
+        do {
+            var str = NSMutableString(string: "123")
+            a.setAssociatedValue(str, key: "str", policy: .retain)
+            str.append("333")
+            print(a.getAssociatedValue(withKey: "str") ?? "")
+        }
+        
+        do {
+            class Info {
+                var math: Int
+                var english: Int
+                init(math: Int = 80, english: Int = 70) {
+                    self.math = math
+                    self.english = english
+                }
+            }
+            var info: Info? = Info()
+            a.setAssociatedValue(info, key: "info", policy: .weak)
+            info = nil
+            print(a.getAssociatedValue(withKey: "info") ?? "")
+        }
+        
+        do {
+            var text = NSMutableString(string: "123")
+            a.setAssociatedValue(text, key: "text", policy: .copy)
+            text.append("333")
+            print(a.getAssociatedValue(withKey: "text") ?? "")
+        }
     }
 }

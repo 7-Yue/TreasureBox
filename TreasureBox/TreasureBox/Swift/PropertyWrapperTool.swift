@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - Userdefaults
+// MARK: - Userdefaults 的属性包装器
 
 @propertyWrapper
 public class UserSettingsOpt<T> {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4B50142BA31E360039D454 /* NSTimer+TBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A4B50132BA31E360039D454 /* NSTimer+TBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A4B50162BA31E430039D454 /* NSTimer+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B50152BA31E430039D454 /* NSTimer+TBExtension.m */; };
 		0A5099972B8835F0003C774E /* TreasureBox.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099962B8835F0003C774E /* TreasureBox.docc */; };
 		0A50999D2B8835F0003C774E /* TreasureBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5099922B8835F0003C774E /* TreasureBox.framework */; };
 		0A5099A22B8835F0003C774E /* TreasureBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099A12B8835F0003C774E /* TreasureBoxTests.swift */; };
@@ -14,6 +16,8 @@
 		0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099E92B8836DB003C774E /* DataStructureTool.swift */; };
 		0A5099ED2B8877EB003C774E /* PropertyWrapperTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */; };
 		0A51E1102B971CF9006118E4 /* OtherTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51E10F2B971CF9006118E4 /* OtherTool.swift */; };
+		0A749E6D2BA42FD600FD6195 /* NSMethodSignature+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A749E6C2BA42FD600FD6195 /* NSMethodSignature+TBExtension.m */; };
+		0A749E6E2BA42FD600FD6195 /* NSMethodSignature+TBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A749E6B2BA42FD600FD6195 /* NSMethodSignature+TBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A8384322B917F3900C2A2D8 /* NSObject+TBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8384302B917F3900C2A2D8 /* NSObject+TBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A8384332B917F3900C2A2D8 /* NSObject+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8384312B917F3900C2A2D8 /* NSObject+TBExtension.m */; };
 /* End PBXBuildFile section */
@@ -29,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A4B50132BA31E360039D454 /* NSTimer+TBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+TBExtension.h"; sourceTree = "<group>"; };
+		0A4B50152BA31E430039D454 /* NSTimer+TBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+TBExtension.m"; sourceTree = "<group>"; };
 		0A5099922B8835F0003C774E /* TreasureBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TreasureBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5099952B8835F0003C774E /* TreasureBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreasureBox.h; sourceTree = "<group>"; };
 		0A5099962B8835F0003C774E /* TreasureBox.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TreasureBox.docc; sourceTree = "<group>"; };
@@ -37,6 +43,8 @@
 		0A5099E92B8836DB003C774E /* DataStructureTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureTool.swift; sourceTree = "<group>"; };
 		0A5099EC2B8877EB003C774E /* PropertyWrapperTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapperTool.swift; sourceTree = "<group>"; };
 		0A51E10F2B971CF9006118E4 /* OtherTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherTool.swift; sourceTree = "<group>"; };
+		0A749E6B2BA42FD600FD6195 /* NSMethodSignature+TBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+TBExtension.h"; sourceTree = "<group>"; };
+		0A749E6C2BA42FD600FD6195 /* NSMethodSignature+TBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+TBExtension.m"; sourceTree = "<group>"; };
 		0A8384302B917F3900C2A2D8 /* NSObject+TBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBExtension.h"; sourceTree = "<group>"; };
 		0A8384312B917F3900C2A2D8 /* NSObject+TBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TBExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +121,10 @@
 			children = (
 				0A8384302B917F3900C2A2D8 /* NSObject+TBExtension.h */,
 				0A8384312B917F3900C2A2D8 /* NSObject+TBExtension.m */,
+				0A4B50132BA31E360039D454 /* NSTimer+TBExtension.h */,
+				0A4B50152BA31E430039D454 /* NSTimer+TBExtension.m */,
+				0A749E6B2BA42FD600FD6195 /* NSMethodSignature+TBExtension.h */,
+				0A749E6C2BA42FD600FD6195 /* NSMethodSignature+TBExtension.m */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -132,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8384322B917F3900C2A2D8 /* NSObject+TBExtension.h in Headers */,
+				0A4B50142BA31E360039D454 /* NSTimer+TBExtension.h in Headers */,
 				0A5099A32B8835F0003C774E /* TreasureBox.h in Headers */,
+				0A749E6E2BA42FD600FD6195 /* NSMethodSignature+TBExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8384332B917F3900C2A2D8 /* NSObject+TBExtension.m in Sources */,
+				0A749E6D2BA42FD600FD6195 /* NSMethodSignature+TBExtension.m in Sources */,
 				0A5099ED2B8877EB003C774E /* PropertyWrapperTool.swift in Sources */,
+				0A4B50162BA31E430039D454 /* NSTimer+TBExtension.m in Sources */,
 				0A51E1102B971CF9006118E4 /* OtherTool.swift in Sources */,
 				0A5099972B8835F0003C774E /* TreasureBox.docc in Sources */,
 				0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */,

@@ -19,7 +19,7 @@
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation {
-    NSAssert(self.weakObj, @"weakTarget 怎么被释放了");
+    NSAssert(self.weakObj, @"weakTarget 比 timer 先释放");
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector {
@@ -48,22 +48,6 @@
                                           selector:aSelector 
                                           userInfo:userInfo
                                            repeats:yesOrNo];
-}
-
-+ (NSTimer *)tb_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
-                                         block:(void (^_Nullable)(void))block
-                                       repeats:(BOOL)repeats {
-    return [self scheduledTimerWithTimeInterval:interval 
-                                         target:self
-                                       selector:@selector(tb_blockSelector:)
-                                       userInfo:[block copy] repeats:repeats];
-}
-
-+ (void)tb_blockSelector:(NSTimer *)timer {
-    void(^block)(void) = timer.userInfo;
-    if (block) {
-        block();
-    }
 }
 
 @end

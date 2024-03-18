@@ -10,7 +10,7 @@ public func name(_ o: Any) -> String {
 /// 获取Data数据的16进制值
 /// - Parameter data: 二进制数据
 /// - Returns: 16进制显示字符串
-public func logDataHex(_ data: Data) -> String {
+public func dataHex(_ data: Data) -> String {
     // 将数据转换为十六进制字符串
     let hexStrings = data.map { String(format: "%02hhx", $0) }
     var res = ""
@@ -19,7 +19,6 @@ public func logDataHex(_ data: Data) -> String {
     for chunkIndex in stride(from: 0, to: hexStrings.count, by: chunkSize) {
         let chunk = Array(hexStrings[chunkIndex..<min(chunkIndex + chunkSize, hexStrings.count)])
         let line = chunk.joined(separator: " ")
-        print(line)
         res.append(line)
     }
     return res

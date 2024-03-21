@@ -1,26 +1,42 @@
 import UIKit
 import TreasureBox
 
-class Demo {
-    @objc func t() {
-        print(123)
-    }
-}
+var v = 61
 
 class ViewController: UIViewController {
     
-    var timer: Timer?
-    var demo: Demo?
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = DEMOVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+
+class DEMOVC : UIViewController, TBTimerEventDelegate {
+    func timerEvent(with timer: TBTimer) {
+        v = v - 1
+        print(v)
+        if (v == 55) {
+            timer.finish()
+        }
+    }
+    
+    
+    let timer = TBTimer(timeInterval: 1.0, delayInterval: 0.0, dispatchQueue: DispatchQueue.main, isRepeat: true)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.demo = Demo()
-        self.timer = Timer.tb_scheduledTimer(withTimeInterval: 1.0, weakTarget: self.demo, selector: #selector(Demo.t), userInfo: nil, repeats: true)
+        self.view.backgroundColor = .red
+        self.timer.add(self)
+        self.timer.start()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.timer.finish()
+    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.demo = nil
+    deinit {
+        print("释放")
     }
 }
-

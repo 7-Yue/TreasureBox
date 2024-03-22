@@ -28,7 +28,6 @@ final class TBTimerTests: XCTestCase {
 
 }
 
-var v = 61
 
 extension TBTimerTests {
 
@@ -37,11 +36,7 @@ extension TBTimerTests {
         
         class ContainerBox: NSObject, TBTimerEventDelegate {
             func timerEvent(with timer: TBTimer) {
-                v = v - 1
-                print(v)
-                if (v == 55) {
-                    timer.suspend()
-                }
+
             }
         }
         print("start")

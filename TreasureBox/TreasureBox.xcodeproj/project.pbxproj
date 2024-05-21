@@ -29,8 +29,8 @@
 		0A8384322B917F3900C2A2D8 /* NSObject+TBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8384302B917F3900C2A2D8 /* NSObject+TBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A8384332B917F3900C2A2D8 /* NSObject+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8384312B917F3900C2A2D8 /* NSObject+TBExtension.m */; };
 		0AB583E32BFC82820007A26E /* NSObjectTBExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB583E22BFC82820007A26E /* NSObjectTBExtensionTests.m */; };
-		0AF1945A2BFB24F0003C98EA /* UILabel+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF194592BFB24F0003C98EA /* UILabel+TBExtension.m */; };
-		0AF1945B2BFB24F0003C98EA /* UILabel+TBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF194582BFB24F0003C98EA /* UILabel+TBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AF1945A2BFB24F0003C98EA /* UIView+TBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF194592BFB24F0003C98EA /* UIView+TBExtension.m */; };
+		0AF1945B2BFB24F0003C98EA /* UIView+TBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF194582BFB24F0003C98EA /* UIView+TBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +68,8 @@
 		0A8384302B917F3900C2A2D8 /* NSObject+TBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBExtension.h"; sourceTree = "<group>"; };
 		0A8384312B917F3900C2A2D8 /* NSObject+TBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TBExtension.m"; sourceTree = "<group>"; };
 		0AB583E22BFC82820007A26E /* NSObjectTBExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectTBExtensionTests.m; sourceTree = "<group>"; };
-		0AF194582BFB24F0003C98EA /* UILabel+TBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+TBExtension.h"; sourceTree = "<group>"; };
-		0AF194592BFB24F0003C98EA /* UILabel+TBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TBExtension.m"; sourceTree = "<group>"; };
+		0AF194582BFB24F0003C98EA /* UIView+TBExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TBExtension.h"; sourceTree = "<group>"; };
+		0AF194592BFB24F0003C98EA /* UIView+TBExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TBExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 				0A749E6C2BA42FD600FD6195 /* NSMethodSignature+TBExtension.m */,
 				0A2415CB2BABD3C6008F14CB /* TBTimer.h */,
 				0A2415CC2BABD3C6008F14CB /* TBTimer.m */,
-				0AF194582BFB24F0003C98EA /* UILabel+TBExtension.h */,
-				0AF194592BFB24F0003C98EA /* UILabel+TBExtension.m */,
+				0AF194582BFB24F0003C98EA /* UIView+TBExtension.h */,
+				0AF194592BFB24F0003C98EA /* UIView+TBExtension.m */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 				0A4B50142BA31E360039D454 /* NSTimer+TBExtension.h in Headers */,
 				0A5099A32B8835F0003C774E /* TreasureBox.h in Headers */,
 				0A2415CD2BABD3C6008F14CB /* TBTimer.h in Headers */,
-				0AF1945B2BFB24F0003C98EA /* UILabel+TBExtension.h in Headers */,
+				0AF1945B2BFB24F0003C98EA /* UIView+TBExtension.h in Headers */,
 				0A749E6E2BA42FD600FD6195 /* NSMethodSignature+TBExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +287,7 @@
 				0A51E1102B971CF9006118E4 /* OtherTool.swift in Sources */,
 				0A5099972B8835F0003C774E /* TreasureBox.docc in Sources */,
 				0A5099EA2B8836DB003C774E /* DataStructureTool.swift in Sources */,
-				0AF1945A2BFB24F0003C98EA /* UILabel+TBExtension.m in Sources */,
+				0AF1945A2BFB24F0003C98EA /* UIView+TBExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

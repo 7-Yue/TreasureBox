@@ -11,10 +11,13 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
         
         let btn = UIButton(frame: CGRect(x: 50, y: 200, width: 100, height: 40))
+        btn.backgroundColor = .lightGray
         btn.setTitle("vc", for: .normal)
         btn.setTitleColor(.red, for: .normal)
         btn.addTarget(self, action: #selector(ViewController.routeVC), for: .touchUpInside)
+        btn.setCorners([.bottomLeft,.topLeft], radius: 20)
         self.view.addSubview(btn)
+        
         
         self.t = Timer.tb_scheduledTimer(withTimeInterval: 1.0, weakTarget: self, selector: #selector(ac), userInfo: nil, repeats: true)
     }

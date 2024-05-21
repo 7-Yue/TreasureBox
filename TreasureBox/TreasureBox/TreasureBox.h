@@ -13,4 +13,4 @@ FOUNDATION_EXPORT const unsigned char TreasureBoxVersionString[];
 #import <TreasureBox/NSObject+TBExtension.h>
 #import <TreasureBox/NSTimer+TBExtension.h>
 #import <TreasureBox/NSMethodSignature+TBExtension.h>
-#import <TreasureBox/UILabel+TBExtension.h>
+#import <TreasureBox/UIView+TBExtension.h>

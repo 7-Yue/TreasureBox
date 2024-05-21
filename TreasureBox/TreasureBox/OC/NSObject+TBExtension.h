@@ -1,4 +1,17 @@
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+
+
+/// 方法交换
+/// - Parameters:
+///   - cls: 交换类
+///   - originalSelector: 原始方法
+///   - swizzledSelector: 交换方法
+///   - isClassMethod: 是否是类方法
+FOUNDATION_EXTERN void SwizzleMethod(Class _Nonnull cls,
+                                     SEL _Nonnull originalSelector,
+                                     SEL _Nonnull swizzledSelector,
+                                     BOOL isClassMethod);
 
 typedef NS_ENUM(NSInteger, TBAssociationPolicy) {
     TBAssociationPolicy_Assign              = 1,
